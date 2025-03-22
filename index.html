@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure API Lookup</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Secure API Lookup</h2>
+
+        <input type="password" id="decryptKey" placeholder="Enter Decryption Key">
+        <button onclick="decryptConfig()">Unlock API</button>
+
+        <div id="api-section" style="display:none;">
+            <select id="apiSelect">
+                <option value="vehicle">Vehicle Number Check</option>
+                <option value="pan">PAN Details Check</option>
+                <option value="phone">Phone Details Check</option>
+                <option value="aadhar">Aadhar to PAN</option>
+            </select>
+            <input type="text" id="queryInput" placeholder="Enter Value">
+            <button onclick="fetchData()">Submit</button>
+
+            <div id="responseContainer"></div>
+        </div>
+    </div>
+
+    <script src="crypto.js"></script>
+    <script src="decrypt.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
